@@ -3,7 +3,7 @@ name: Release & AUR Publish
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 permissions:
   contents: write
@@ -93,6 +93,6 @@ jobs:
           pkgname: spacecal-for-monado
           pkgbuild: PKGBUILD
           commit_username: 99oblivius
-          commit_email: 99oblivius@proton.me
+          commit_email: projects@oblivius.dev
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
           commit_message: "Update to ${{ needs.build-and-release.outputs.version }}"
